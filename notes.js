@@ -14,3 +14,13 @@
  * 
  * Fragment : <></> use this syntax to group multiple elements as a single element.
  *  */ 
+
+// react hooks file : packages/react/src/ReactHooks.js
+/**
+ * useContext, useState, useReducer, useRef, useEffect, useInsertionEffect, useLayoutEffect, useCallback, useMemo, useImperativeHandle, useDebugValue, useTransition, useDeferredValue, useId, useSyncExternalStore, useCacheRefresh, useMemoCache, useEffectEvent, useOptimistic, useActionState
+ */
+
+// react controls UI update.
+
+// createRoot() method creates a DOM like tree. 
+// React uses fiber algorithm to update virtual DOM.
