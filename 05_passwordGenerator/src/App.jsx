@@ -9,12 +9,24 @@ function App() {
 
   // useCallBack(function, [dependencies]) - cache the function between re-renders.
   const passwordGenerator = useCallback(() => {
+    let pass = "";
+    let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    if(numberAllowed) str += "0123456789";
+    if(charAllowed) str += "!@#$%^&*-_+=[]{}~`";
 
+    for (let i = 1; i <= length; i++) {
+      let char = Math.floor(Math.random() * str.length + 1);
+      // pass += str.charAt(char);
+      pass += str[char];
 
-  }, [length,numberAllowed,charAllowed,setPassword])
+    }
+    setPassword(pass);
+
+  }, [length,numberAllowed,charAllowed,setPassword]);
+  
   return (
     <>
-      <h1 className="text-5xl text-center font-semibold mt-4">Password Generator</h1>
+      
     </>
   )
 }
