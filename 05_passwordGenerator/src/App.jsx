@@ -17,7 +17,7 @@ function App() {
     if (charAllowed) str += "!@#$%^&*-_+=[]{}~`";
 
     for (let i = 1; i <= length; i++) {
-      let char = Math.floor(Math.random() * str.length + 1);
+      let char = Math.floor(Math.random() * str.length);
       // pass += str.charAt(char);
       pass += str[char];
     }
@@ -45,15 +45,15 @@ function App() {
             type="text"
             ref={passwordRef}
             value={password}
-            className="outline-none w-full px-4 py-3 font-medium text-xl"
+            className="outline-none w-full px-4 py-3 font-medium text-xl selection:bg-blue-200"
             placeholder="Password"
             readOnly
           />
-          <button onClick={copyPasswordToClipboard} className="outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0 text-xl font-medium">
+          <button onClick={copyPasswordToClipboard} className="outline-none bg-pink-800 text-white px-7 py-0.5 shrink-0 text-xl font-medium">
             copy
           </button>
         </div>
-        <div className="flex text-xl justify-evenly">
+        <div className="flex text-xl justify-evenly accent-black">
           <div className="flex items-center gap-x-1">
             <input
               type="range"
