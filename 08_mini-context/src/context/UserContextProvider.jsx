@@ -1,5 +1,6 @@
 import React from "react";
 import userContext from "./UserContext";
+import PropTypes from 'eslint'
 
 const UserContextProvider = ({children}) => {
     const [user, setUser] = React.useState(null);
@@ -12,3 +13,7 @@ const UserContextProvider = ({children}) => {
 }
 
 export default UserContextProvider;
+
+UserContextProvider.propTypes = {
+    children: PropTypes.string.isRequired
+}
